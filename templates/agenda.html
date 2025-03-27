@@ -1,0 +1,30 @@
+{% extends "_base.html" %}
+
+{% block conteudo %}
+Página da agenda
+
+
+<h3>Adicionar Item </h3>
+<form action="agenda_adc.php" method="post">
+    <input type="text" name="titulo" id="" placeholder="Escreva o nome do item">
+    <input type="date" name="data" id="" placeholder="Escreva o nome do item">
+    <input type="submit" value="adicionar">
+</form>
+
+<h3>Adicionar na agenda ikdjiojeiodjeioj</h3>
+<ul>
+    {% for agendai in agenda %}
+    <br>
+    <li> {{ agendai.titulo  }} 
+            <br> 
+            {{ agendai.data  }} 
+            <br> 
+        <a href="agenda_editar.php?id={{agendai.id}}" > 🖊️ Editar <a/>
+            <br>
+       <a href="agenda_rmv.php?id={{ agendai.id }}"> ❌  Deletar <a/>
+    </li>
+ {% endfor %}
+   </ul>
+{% endblock %}
+
+  

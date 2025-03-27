@@ -37,3 +37,6 @@ $nascimento = Carbon::createFromDate(2007,03,07);
 echo 'Diferença de datas:' . Carbon::now()->diff($nascimento) .  '<br>';
 
 
+
+
+
