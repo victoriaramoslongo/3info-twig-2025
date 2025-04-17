@@ -1,10 +1,10 @@
 <?php
 
 require('twig_carregar.php');
+Use Carbon\Carbon;
 
 
 
-echo Carbon::now() . '<br>' ; 
-echo Carbon::now()->addDay() . '<br>' ;
-
-echo $twig-> render('horario.html');
+echo $twig->render('horario.html', [
+   'datas' => ['hoje' => Carbon::now(), 'amanha' => Carbon::now()->addDay() ]
+]);
